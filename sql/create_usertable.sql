@@ -1,0 +1,19 @@
+DROP DATATABLE IF EXISTS go;
+CREATE DATABASE go;
+
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS userdata;
+
+\c go
+
+CREATE TABLE users (
+    ID SERIAL,
+    Username VARCHAR(100) PRIMARY KEY
+);
+
+CREATE TABLE userdata (
+    UserID int NOT NULL,
+    Name VARCHAR(100),
+    Surname VARCHAR(100),
+    Description VARCHAR(200)
+);
